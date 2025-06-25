@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecureScan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🔐 SecureScan</h1>
+    <p>Smart digital security tool</p>
+  </header>
+
+  <main>
+    <div class="tool-buttons">
+      <button onclick="showTool('text')">Text Scanner</button>
+      <button onclick="showTool('link')">Link Verifier</button>
+      <button onclick="showTool('file')">File Scanner</button>
+      <button onclick="showTool('image')">Image Checker</button>
+    </div>
+
+    <div id="text-tool" class="tool-form">
+      <h2>Text Scanner</h2>
+      <textarea id="text-input" placeholder="Paste text here..."></textarea>
+      <button onclick="scanText()">Scan</button>
+    </div>
+
+    <div id="link-tool" class="tool-form hidden">
+      <h2>Link Verifier</h2>
+      <input type="text" id="link-input" placeholder="Paste link here...">
+      <button onclick="scanLink()">Scan</button>
+    </div>
+
+    <div id="file-tool" class="tool-form hidden">
+      <h2>File Scanner</h2>
+      <input type="file" id="file-input">
+      <button onclick="scanFile()">Scan</button>
+    </div>
+
+    <div id="image-tool" class="tool-form hidden">
+      <h2>Image Checker</h2>
+      <input type="file" id="image-input">
+      <button onclick="scanImage()">Scan</button>
+    </div>
+
+    <div id="result-box" class="result"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
